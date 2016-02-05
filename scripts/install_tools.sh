@@ -54,7 +54,7 @@ apt-get install -y google-chrome-stable && \
 rm -rf /var/lib/apt/lists/*
 
 # Install Python and PIP
-apt-get install python python-pip python-dev
+apt-get install python python-pip python-dev -y
 pip install --upgrade pip
 pip install --upgrade virtualenv
 
