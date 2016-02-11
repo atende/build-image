@@ -30,6 +30,7 @@ apt-get install -y build-essential
 npm install -g gulp
 npm install -g bower
 npm install -g jspm
+npm install -g tsd
 # Installing Google Dart
 #add-apt-repository -y ppa:hachre/dart
 #apt-get update -q
