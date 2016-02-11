@@ -14,6 +14,9 @@ COPY scripts/install_tools.sh /root/install_tools.sh
 RUN chmod +x /root/install_tools.sh
 RUN /root/install_tools.sh
 
+# Setup Non Root Account
+RUN useradd -m -d /home/ciuser ciuser
+
 CMD  ["/bin/bash"]
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
