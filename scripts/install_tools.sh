@@ -1,10 +1,10 @@
 #!/bin/bash
-
-apt-get update -q && apt-get install -y git \
+apt-get update -q
+apt-get install -y git \
   subversion mercurial
 
 # Install xvfb (headless browser tests)
-apt-get update -q
+
 apt-get install -y xvfb
 cp /root/xvfb /etc/init.d/
 chmod +x /etc/init.d/xvfb
@@ -46,6 +46,7 @@ tar xvjf ${PHANTOM_JS}.tar.bz2
 ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/share/phantomjs
 ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin/phantomjs
 ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/bin/phantomjs
+rm ${PHANTOM_JS}.tar.bz2
 
 # Install Chrome.
 apt-get install wget -y
@@ -53,7 +54,6 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
 echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list && \
 apt-get update && \
 apt-get install -y google-chrome-stable && \
-rm -rf /var/lib/apt/lists/*
 
 # Install Python and PIP
 apt-get install python python-pip python-dev -y
@@ -62,3 +62,6 @@ pip install --upgrade virtualenv
 
 # Mkdocs
 pip install mkdocs
+
+# Clean Image
+rm -rf /var/lib/apt/lists/*
