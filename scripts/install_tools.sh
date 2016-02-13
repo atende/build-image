@@ -63,5 +63,8 @@ pip install --upgrade virtualenv
 # Mkdocs
 pip install mkdocs
 
+# PostgreSQL
+apt-get install postgresql postgresql-contrib
+
 # Clean Image
 rm -rf /var/lib/apt/lists/*
