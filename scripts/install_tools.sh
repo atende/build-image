@@ -62,6 +62,10 @@ pip install --upgrade virtualenv
 # Mkdocs
 pip install mkdocs
 
+# NetCat
+
+apt-get install -y netcat
+
 # Clean Image
 apt-get autoremove -y
 apt-get clean -y
