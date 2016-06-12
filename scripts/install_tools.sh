@@ -1,7 +1,6 @@
 #!/bin/bash
 apt-get update -q
-apt-get install -y git \
-  subversion mercurial
+apt-get install -y git curl
 
 # Install xvfb (headless browser tests)
 
@@ -30,7 +29,7 @@ apt-get install -y build-essential
 npm install -g gulp
 npm install -g bower
 npm install -g jspm
-npm install -g tsd
+npm install -g typings
 # Installing Google Dart
 #add-apt-repository -y ppa:hachre/dart
 #apt-get update -q
@@ -63,8 +62,7 @@ pip install --upgrade virtualenv
 # Mkdocs
 pip install mkdocs
 
-# PostgreSQL
-apt-get install postgresql postgresql-contrib -y
-
 # Clean Image
+apt-get autoremove -y
+apt-get clean -y
 rm -rf /var/lib/apt/lists/*

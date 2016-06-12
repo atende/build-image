@@ -1,4 +1,4 @@
-FROM atende/baseimage-jdk
+FROM azul/zulu-openjdk:8
 
 MAINTAINER Giovanni Silva giovanni@atende.info
 
