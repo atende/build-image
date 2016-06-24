@@ -61,6 +61,7 @@ pip install --upgrade virtualenv
 
 # Mkdocs
 pip install mkdocs
+pip install mkdocs-material
 
 # NetCat
 
