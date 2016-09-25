@@ -21,7 +21,7 @@ apt-get install -y postgresql-client
 
 
 # Installing NodeJS
-curl -sL https://deb.nodesource.com/setup_4.x | bash -
+curl -sL https://deb.nodesource.com/setup_5.x | bash -
 apt-get install -y nodejs
 apt-get install -y build-essential
 
